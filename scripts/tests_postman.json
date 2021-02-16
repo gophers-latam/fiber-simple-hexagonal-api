@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "83e5b41d-0d0c-4201-8b1f-7d2ea559e9cd",
+		"name": "fiber hex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/clientes?estatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/clientes?estatus=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "estatus",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/clientes/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/clientes/2000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clientes",
+						"2000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/clientes/:id/cuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tipo_cuenta\": \"ahorro\",\n    \"cantidad\": 5100.00\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/clientes/2000/cuenta",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clientes",
+						"2000",
+						"cuenta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/clientes/:id/cuenta/:id_cuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tipo_transaccion\": \"retiro\",\n    \"cantidad\": 1000000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/clientes/2000/cuenta/95470",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clientes",
+						"2000",
+						"cuenta",
+						"95470"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
